@@ -595,9 +595,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -835,9 +835,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -1074,9 +1074,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -1313,9 +1313,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -1552,9 +1552,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -1791,9 +1791,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -2030,9 +2030,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -2269,9 +2269,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -2508,9 +2508,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -2747,9 +2747,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -2986,9 +2986,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -3225,9 +3225,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -3464,9 +3464,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -3703,9 +3703,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -3942,9 +3942,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -4181,9 +4181,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -4420,9 +4420,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -4659,9 +4659,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -4898,9 +4898,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -5137,9 +5137,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -5376,9 +5376,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
@@ -5615,9 +5615,9 @@ elif move == '7':
         
 print_board()
 
-token = 'O'
-
 check_win()
+
+token = 'O'
 
 move = input('Choose a column: ')
 
