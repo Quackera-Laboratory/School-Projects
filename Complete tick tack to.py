@@ -19,24 +19,53 @@ def print_board():
 print_board()
 move = int(input('move'))
 if move == 1:
-    a = token
+    if a == 1:
+        a = token
+    else:
+        print("\n point already plotted")
 
 elif move == 2:
-    b = token
+    if b == 2:
+        b = token
+    else:
+        print(" \n point already ploted")
 elif move == 3:
-    c = token
+    if c == 3:
+        c = token
+    else:
+        print(" \n point already ploted")
 elif move == 4:
-    d = token
+    if d == 4:
+        d = token
+    else:
+        print(" \n point already ploted")
 elif move == 5:
-    e = token
+    if e == 5:
+        e = token
+    else:
+        print("\n point already ploted")
 elif move == 6:
-    f = token
+    if f == 6:
+        f = token
+    else:
+        print("\n point already ploted")
 elif move == 7:
-    g = token
+    if g == 7:
+        g = token
+    else:
+        print("\n point already ploted")
 elif move == 8:
-    h = token
+    if h == 8:
+        h = token
+    else:
+        print("\n point already ploted")
 elif move == 9:
-    i = token
+    if i == 9:
+        i = token
+    else:
+        print("\n point already ploted")
+        
+
 
 
 token = "O"
@@ -45,46 +74,100 @@ move = int(input('move'))
 if move == 1:
     if a == 1:
         a = token
+    else:
+        print("\n point already plotted")
 
 elif move == 2:
-    b = token
+    if b == 2:
+        b = token
+    else:
+        print(" \n point already ploted")
 elif move == 3:
-    c = token
+    if c == 3:
+        c = token
+    else:
+        print(" \n point already ploted")
 elif move == 4:
-    d = token
+    if d == 4:
+        d = token
+    else:
+        print(" \n point already ploted")
 elif move == 5:
-    e = token
+    if e == 5:
+        e = token
+    else:
+        print("\n point already ploted")
 elif move == 6:
-    f = token
+    if f == 6:
+        f = token
+    else:
+        print("\n point already ploted")
 elif move == 7:
-    g = token
+    if g == 7:
+        g = token
+    else:
+        print("\n point already ploted")
 elif move == 8:
-    h = token
+    if h == 8:
+        h = token
+    else:
+        print("\n point already ploted")
 elif move == 9:
-    i = token
+    if i == 9:
+        i = token
+    else:
+        print("\n point already ploted")
+
    
 token = "X"   
 print_board()
 move = int(input('move'))
 if move == 1:
-    a = token
+    if a == 1:
+        a = token
+    else:
+        print("\n point already plotted")
 
 elif move == 2:
-    b = token
+    if b == 2:
+        b = token
+    else:
+        print(" \n point already ploted")
 elif move == 3:
-    c = token
+    if c == 3:
+        c = token
+    else:
+        print(" \n point already ploted")
 elif move == 4:
-    d = token
+    if d == 4:
+        d = token
+    else:
+        print(" \n point already ploted")
 elif move == 5:
-    e = token
+    if e == 5:
+        e = token
+    else:
+        print("\n point already ploted")
 elif move == 6:
-    f = token
+    if f == 6:
+        f = token
+    else:
+        print("\n point already ploted")
 elif move == 7:
-    g = token
+    if g == 7:
+        g = token
+    else:
+        print("\n point already ploted")
 elif move == 8:
-    h = token
+    if h == 8:
+        h = token
+    else:
+        print("\n point already ploted")
 elif move == 9:
-    i = token
+    if i == 9:
+        i = token
+    else:
+        print("\n point already ploted")
    
 token = "O"
 print_board()
@@ -114,24 +197,51 @@ token = "X"
 print_board()
 move = int(input('move'))
 if move == 1:
-    a = token
+    if a == 1:
+        a = token
+    else:
+        print("\n point already plotted")
 
 elif move == 2:
-    b = token
+    if b == 2:
+        b = token
+    else:
+        print(" \n point already ploted")
 elif move == 3:
-    c = token
+    if c == 3:
+        c = token
+    else:
+        print(" \n point already ploted")
 elif move == 4:
-    d = token
+    if d == 4:
+        d = token
+    else:
+        print(" \n point already ploted")
 elif move == 5:
-    e = token
+    if e == 5:
+        e = token
+    else:
+        print("\n point already ploted")
 elif move == 6:
-    f = token
+    if f == 6:
+        f = token
+    else:
+        print("\n point already ploted")
 elif move == 7:
-    g = token
+    if g == 7:
+        g = token
+    else:
+        print("\n point already ploted")
 elif move == 8:
-    h = token
+    if h == 8:
+        h = token
+    else:
+        print("\n point already ploted")
 elif move == 9:
-    i = token
+    if i == 9:
+        i = token
+    else:
+        print("\n point already ploted")
 
 if a == token and b == token and c == token:
     print({token}, "wins!")
@@ -162,24 +272,51 @@ token = "O"
 print_board()
 move = int(input('move'))
 if move == 1:
-    a = token
+    if a == 1:
+        a = token
+    else:
+        print("\n point already plotted")
 
 elif move == 2:
-    b = token
+    if b == 2:
+        b = token
+    else:
+        print(" \n point already ploted")
 elif move == 3:
-    c = token
+    if c == 3:
+        c = token
+    else:
+        print(" \n point already ploted")
 elif move == 4:
-    d = token
+    if d == 4:
+        d = token
+    else:
+        print(" \n point already ploted")
 elif move == 5:
-    e = token
+    if e == 5:
+        e = token
+    else:
+        print("\n point already ploted")
 elif move == 6:
-    f = token
+    if f == 6:
+        f = token
+    else:
+        print("\n point already ploted")
 elif move == 7:
-    g = token
+    if g == 7:
+        g = token
+    else:
+        print("\n point already ploted")
 elif move == 8:
-    h = token
+    if h == 8:
+        h = token
+    else:
+        print("\n point already ploted")
 elif move == 9:
-    i = token
+    if i == 9:
+        i = token
+    else:
+        print("\n point already ploted")
     
 if a == token and b == token and c == token:
     print({token}, "wins!")
@@ -210,24 +347,51 @@ token = "X"
 print_board()
 move = int(input('move'))
 if move == 1:
-    a = token
+    if a == 1:
+        a = token
+    else:
+        print("\n point already plotted")
 
 elif move == 2:
-    b = token
+    if b == 2:
+        b = token
+    else:
+        print(" \n point already ploted")
 elif move == 3:
-    c = token
+    if c == 3:
+        c = token
+    else:
+        print(" \n point already ploted")
 elif move == 4:
-    d = token
+    if d == 4:
+        d = token
+    else:
+        print(" \n point already ploted")
 elif move == 5:
-    e = token
+    if e == 5:
+        e = token
+    else:
+        print("\n point already ploted")
 elif move == 6:
-    f = token
+    if f == 6:
+        f = token
+    else:
+        print("\n point already ploted")
 elif move == 7:
-    g = token
+    if g == 7:
+        g = token
+    else:
+        print("\n point already ploted")
 elif move == 8:
-    h = token
+    if h == 8:
+        h = token
+    else:
+        print("\n point already ploted")
 elif move == 9:
-    i = token
+    if i == 9:
+        i = token
+    else:
+        print("\n point already ploted")
     
 if a == token and b == token and c == token:
     print({token}, "wins!")
@@ -258,24 +422,51 @@ token = "O"
 print_board()
 move = int(input('move'))
 if move == 1:
-    a = token
+    if a == 1:
+        a = token
+    else:
+        print("\n point already plotted")
 
 elif move == 2:
-    b = token
+    if b == 2:
+        b = token
+    else:
+        print(" \n point already ploted")
 elif move == 3:
-    c = token
+    if c == 3:
+        c = token
+    else:
+        print(" \n point already ploted")
 elif move == 4:
-    d = token
+    if d == 4:
+        d = token
+    else:
+        print(" \n point already ploted")
 elif move == 5:
-    e = token
+    if e == 5:
+        e = token
+    else:
+        print("\n point already ploted")
 elif move == 6:
-    f = token
+    if f == 6:
+        f = token
+    else:
+        print("\n point already ploted")
 elif move == 7:
-    g = token
+    if g == 7:
+        g = token
+    else:
+        print("\n point already ploted")
 elif move == 8:
-    h = token
+    if h == 8:
+        h = token
+    else:
+        print("\n point already ploted")
 elif move == 9:
-    i = token
+    if i == 9:
+        i = token
+    else:
+        print("\n point already ploted")
     
 if a == token and b == token and c == token:
     print({token}, "wins!")
@@ -313,24 +504,51 @@ def print_board():
 print_board()
 move = int(input('move'))
 if move == 1:
-    a = token
+    if a == 1:
+        a = token
+    else:
+        print("\n point already plotted")
 
 elif move == 2:
-    b = token
+    if b == 2:
+        b = token
+    else:
+        print(" \n point already ploted")
 elif move == 3:
-    c = token
+    if c == 3:
+        c = token
+    else:
+        print(" \n point already ploted")
 elif move == 4:
-    d = token
+    if d == 4:
+        d = token
+    else:
+        print(" \n point already ploted")
 elif move == 5:
-    e = token
+    if e == 5:
+        e = token
+    else:
+        print("\n point already ploted")
 elif move == 6:
-    f = token
+    if f == 6:
+        f = token
+    else:
+        print("\n point already ploted")
 elif move == 7:
-    g = token
+    if g == 7:
+        g = token
+    else:
+        print("\n point already ploted")
 elif move == 8:
-    h = token
+    if h == 8:
+        h = token
+    else:
+        print("\n point already ploted")
 elif move == 9:
-    i = token
+    if i == 9:
+        i = token
+    else:
+        print("\n point already ploted")
     
 if a == token and b == token and c == token:
     print({token}, "wins!")
