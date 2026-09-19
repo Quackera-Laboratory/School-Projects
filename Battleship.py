@@ -1,4 +1,4 @@
-
+#asighn board(global) variables
 a1 = 11
 a2 = 12
 a3 = 13
@@ -117,6 +117,12 @@ Submarine = 3
 Cruiser = 3
 Destroyer = 2
 
+carrier = 5
+battleship = 4
+submarine = 3
+cruiser = 3
+destroyer = 2
+
 token = 'S'
 
 # Create the two boards each player will use
@@ -135,6 +141,10 @@ def print_board1():
 
 print_board1()
 
+player1 = (input('"Carrier,\t Battleship,\t Submarine, \t Cruiser, \t Destroyer \n'))
+if player1 == carrier or player1 == Carrier or player1 == battleship or player1 == Battleship or player1 == submarine or player1 == Submarine or player1 == cruiser or player1 == Cruiser or player1 == Destroyer or player1 == destroyer:
+    print("Choose coordinates")
+
 def place_fire():
     global a1, a2, a3, a4, a5, a6, a7, a8, a9, a10
     global b1, b2, b3, b4, b5, b6, b7, b8, b9, b10
@@ -147,7 +157,7 @@ def place_fire():
     global i1, i2, i3, i4, i5, i6, i7, i8, i9, i10
     global j1, j2, j3, j4, j5, j6, j7, j8, j9, j10
 
-    place = int(input('Place ship: '))
+    place = int(input('Ship start and end position \n: '))
 
     if place == 11:
         a1 = token
