@@ -195,3 +195,17 @@ elif choice == 'Deposit' or choice == "deposit" or choice == 'deposet' or choice
         deposited = float(input())
         sav_account = sav_account + deposited
         print(f'\n Your new savings balance is {sav_account}')
+#elif choice == 'Transfer' or choice == 'transfer' or choice == 'trans' or choice == 'Trans':
+        #print(f' \n which account would you like to withdraw from? Checking or Saving?')
+        #acount = float(input())
+    #if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
+        #print(f' \n how much would you like to deposit?')
+        #deposited = float(input())
+        #check_account = check_account + deposited
+        #print(f'\n Your new checking balance is {check_account}')
+
+    #elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
+        #print(f' \n how much would you like to deposit?')
+        #deposited = float(input())
+        #sav_account = sav_account + deposited
+        #print(f'\n Your new savings balance is {sav_account}')
