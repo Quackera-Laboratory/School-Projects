@@ -7,347 +7,63 @@ def print_page1():
 
 #intro to program
 
-choice = (input('"Hello What would you like to do today? \nChecking? \n   Saving? \n     Withdraw? \n       deposit? \n         Transfer \n \t'))
-if choice == 'Checking' or choice == "checking" or choice == 'checkings' or choice == 'Checkings':
-    print(f' \n your balance is {check_account}')
+for loop in range(999):
+    choice = (input('"Hello What would you like to do today? \nChecking? \n   Saving? \n     Withdraw? \n       deposit? \n         Transfer \n \t'))
+    if choice == 'Checking' or choice == "checking" or choice == 'checkings' or choice == 'Checkings':
+        print(f' \n your balance is {check_account}')
     
-elif choice == 'Saving' or choice == "saving" or choice == 'savings' or choice == 'Savings':
-    print(f' \n your balance is {sav_account}')
+    elif choice == 'Saving' or choice == "saving" or choice == 'savings' or choice == 'Savings':
+        print(f' \n your balance is {sav_account}')
     
-elif choice == 'Withdraw' or choice == "withdraw" or choice == 'withdrawing' or choice == 'Witherdrawing':
-    print(f'which account would you like to withdraw from? Checking or Saving?')
-    account = input()
+    elif choice == 'Withdraw' or choice == "withdraw" or choice == 'withdrawing' or choice == 'Witherdrawing':
+        print(f'which account would you like to withdraw from? Checking or Saving?')
+        account = input()
 
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        check_account = check_account - withdrawn
-        print(f'\n Your new checking balance is {check_account}')
+        if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
+            print(f' \n how much would you like to withdraw?')
+            withdrawn = float(input())
+            check_account = check_account - withdrawn
+            print(f'\n Your new checking balance is {check_account}')
 
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        sav_account = sav_account - withdrawn
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Deposit' or choice == "deposit" or choice == 'deposet' or choice == 'Deposet':
-    print(f' \n which account would you like to deposit into? Checking or Saving?')
-    account = input()
+        elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
+            print(f' \n how much would you like to withdraw?')
+            withdrawn = float(input())
+            sav_account = sav_account - withdrawn
+            print(f'\n Your new savings balance is {sav_account}')
+    elif choice == 'Deposit' or choice == "deposit" or choice == 'deposet' or choice == 'Deposet':
+        print(f' \n which account would you like to deposit into? Checking or Saving?')
+        account = input()
 
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        check_account = check_account + deposited
-        print(f'\n Your new checking balance is {check_account}')
+        if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
+            print(f' \n how much would you like to deposit?')
+            deposited = float(input())
+            check_account = check_account + deposited
+            print(f'\n Your new checking balance is {check_account}')
 
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        sav_account = sav_account + deposited
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Transfer' or choice == 'transfer' or choice == 'trans' or choice == 'Trans':
-    print(f' \n which account would you like to transfer from? Checking or Saving?')
-    account = input()
+        elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
+            print(f' \n how much would you like to deposit?')
+            deposited = float(input())
+            sav_account = sav_account + deposited
+            print(f'\n Your new savings balance is {sav_account}')
+    elif choice == 'Transfer' or choice == 'transfer' or choice == 'trans' or choice == 'Trans':
+        print(f' \n which account would you like to transfer from? Checking or Saving?')
+        account = input()
 
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        check_account = check_account - transferred
-        sav_account = sav_account + transferred
-        print(f'\n Your new checking balance is {check_account}')
-        print(f'\n Your new savings balance is {sav_account}')
+        if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
+            print(f' \n how much would you like to transfer?')
+            transferred = float(input())
+            check_account = check_account - transferred
+            sav_account = sav_account + transferred
+            print(f'\n Your new checking balance is {check_account}')
+            print(f'\n Your new savings balance is {sav_account}')
 
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        sav_account = sav_account - transferred
-        check_account = check_account + transferred
-        print(f'\n Your new savings balance is {sav_account}')
-        print(f'\n Your new checking balance is {check_account}')        
+        elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
+            print(f' \n how much would you like to transfer?')
+            transferred = float(input())
+            sav_account = sav_account - transferred
+            check_account = check_account + transferred
+            print(f'\n Your new savings balance is {sav_account}')
+            print(f'\n Your new checking balance is {check_account}')        
 
         
 #first loop
-
-choice = (input('"Hello What would you like to do today? \nChecking? \n   Saving? \n     Withdraw? \n       deposit? \n         Transfer \n \t'))
-if choice == 'Checking' or choice == "checking" or choice == 'checkings' or choice == 'Checkings':
-    print(f' \n your balance is {check_account}')
-    
-elif choice == 'Saving' or choice == "saving" or choice == 'savings' or choice == 'Savings':
-    print(f' \n your balance is {sav_account}')
-    
-elif choice == 'Withdraw' or choice == "withdraw" or choice == 'withdrawing' or choice == 'Witherdrawing':
-    print(f'which account would you like to withdraw from? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        check_account = check_account - withdrawn
-        print(f'\n Your new checking balance is {check_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        sav_account = sav_account - withdrawn
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Deposit' or choice == "deposit" or choice == 'deposet' or choice == 'Deposet':
-    print(f' \n which account would you like to deposit into? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        check_account = check_account + deposited
-        print(f'\n Your new checking balance is {check_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        sav_account = sav_account + deposited
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Transfer' or choice == 'transfer' or choice == 'trans' or choice == 'Trans':
-    print(f' \n which account would you like to transfer from? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        check_account = check_account - transferred
-        sav_account = sav_account + transferred
-        print(f'\n Your new checking balance is {check_account}')
-        print(f'\n Your new savings balance is {sav_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        sav_account = sav_account - transferred
-        check_account = check_account + transferred
-        print(f'\n Your new savings balance is {sav_account}')
-        print(f'\n Your new checking balance is {check_account}')
-        
-choice = (input('"Hello What would you like to do today? \nChecking? \n   Saving? \n     Withdraw? \n       deposit? \n         Transfer \n \t'))
-if choice == 'Checking' or choice == "checking" or choice == 'checkings' or choice == 'Checkings':
-    print(f' \n your balance is {check_account}')
-    
-elif choice == 'Saving' or choice == "saving" or choice == 'savings' or choice == 'Savings':
-    print(f' \n your balance is {sav_account}')
-    
-elif choice == 'Withdraw' or choice == "withdraw" or choice == 'withdrawing' or choice == 'Witherdrawing':
-    print(f'which account would you like to withdraw from? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        check_account = check_account - withdrawn
-        print(f'\n Your new checking balance is {check_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        sav_account = sav_account - withdrawn
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Deposit' or choice == "deposit" or choice == 'deposet' or choice == 'Deposet':
-    print(f' \n which account would you like to deposit into? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        check_account = check_account + deposited
-        print(f'\n Your new checking balance is {check_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        sav_account = sav_account + deposited
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Transfer' or choice == 'transfer' or choice == 'trans' or choice == 'Trans':
-    print(f' \n which account would you like to transfer from? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        check_account = check_account - transferred
-        sav_account = sav_account + transferred
-        print(f'\n Your new checking balance is {check_account}')
-        print(f'\n Your new savings balance is {sav_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        sav_account = sav_account - transferred
-        check_account = check_account + transferred
-        print(f'\n Your new savings balance is {sav_account}')
-        print(f'\n Your new checking balance is {check_account}')
-        
-choice = (input('"Hello What would you like to do today? \nChecking? \n   Saving? \n     Withdraw? \n       deposit? \n         Transfer \n \t'))
-if choice == 'Checking' or choice == "checking" or choice == 'checkings' or choice == 'Checkings':
-    print(f' \n your balance is {check_account}')
-    
-elif choice == 'Saving' or choice == "saving" or choice == 'savings' or choice == 'Savings':
-    print(f' \n your balance is {sav_account}')
-    
-elif choice == 'Withdraw' or choice == "withdraw" or choice == 'withdrawing' or choice == 'Witherdrawing':
-    print(f'which account would you like to withdraw from? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        check_account = check_account - withdrawn
-        print(f'\n Your new checking balance is {check_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        sav_account = sav_account - withdrawn
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Deposit' or choice == "deposit" or choice == 'deposet' or choice == 'Deposet':
-    print(f' \n which account would you like to deposit into? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        check_account = check_account + deposited
-        print(f'\n Your new checking balance is {check_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        sav_account = sav_account + deposited
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Transfer' or choice == 'transfer' or choice == 'trans' or choice == 'Trans':
-    print(f' \n which account would you like to transfer from? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        check_account = check_account - transferred
-        sav_account = sav_account + transferred
-        print(f'\n Your new checking balance is {check_account}')
-        print(f'\n Your new savings balance is {sav_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        sav_account = sav_account - transferred
-        check_account = check_account + transferred
-        print(f'\n Your new savings balance is {sav_account}')
-        print(f'\n Your new checking balance is {check_account}')
-        
-choice = (input('"Hello What would you like to do today? \nChecking? \n   Saving? \n     Withdraw? \n       deposit? \n         Transfer \n \t'))
-if choice == 'Checking' or choice == "checking" or choice == 'checkings' or choice == 'Checkings':
-    print(f' \n your balance is {check_account}')
-    
-elif choice == 'Saving' or choice == "saving" or choice == 'savings' or choice == 'Savings':
-    print(f' \n your balance is {sav_account}')
-    
-elif choice == 'Withdraw' or choice == "withdraw" or choice == 'withdrawing' or choice == 'Witherdrawing':
-    print(f'which account would you like to withdraw from? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        check_account = check_account - withdrawn
-        print(f'\n Your new checking balance is {check_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        sav_account = sav_account - withdrawn
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Deposit' or choice == "deposit" or choice == 'deposet' or choice == 'Deposet':
-    print(f' \n which account would you like to deposit into? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        check_account = check_account + deposited
-        print(f'\n Your new checking balance is {check_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        sav_account = sav_account + deposited
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Transfer' or choice == 'transfer' or choice == 'trans' or choice == 'Trans':
-    print(f' \n which account would you like to transfer from? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        check_account = check_account - transferred
-        sav_account = sav_account + transferred
-        print(f'\n Your new checking balance is {check_account}')
-        print(f'\n Your new savings balance is {sav_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        sav_account = sav_account - transferred
-        check_account = check_account + transferred
-        print(f'\n Your new savings balance is {sav_account}')
-        print(f'\n Your new checking balance is {check_account}')
-        
-choice = (input('"Hello What would you like to do today? \nChecking? \n   Saving? \n     Withdraw? \n       deposit? \n         Transfer \n \t'))
-if choice == 'Checking' or choice == "checking" or choice == 'checkings' or choice == 'Checkings':
-    print(f' \n your balance is {check_account}')
-    
-elif choice == 'Saving' or choice == "saving" or choice == 'savings' or choice == 'Savings':
-    print(f' \n your balance is {sav_account}')
-    
-elif choice == 'Withdraw' or choice == "withdraw" or choice == 'withdrawing' or choice == 'Witherdrawing':
-    print(f'which account would you like to withdraw from? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        check_account = check_account - withdrawn
-        print(f'\n Your new checking balance is {check_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to withdraw?')
-        withdrawn = float(input())
-        sav_account = sav_account - withdrawn
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Deposit' or choice == "deposit" or choice == 'deposet' or choice == 'Deposet':
-    print(f' \n which account would you like to deposit into? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        check_account = check_account + deposited
-        print(f'\n Your new checking balance is {check_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to deposit?')
-        deposited = float(input())
-        sav_account = sav_account + deposited
-        print(f'\n Your new savings balance is {sav_account}')
-elif choice == 'Transfer' or choice == 'transfer' or choice == 'trans' or choice == 'Trans':
-    print(f' \n which account would you like to transfer from? Checking or Saving?')
-    account = input()
-
-    if account == 'Checking' or account == 'checking' or account == 'check' or account == 'Check':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        check_account = check_account - transferred
-        sav_account = sav_account + transferred
-        print(f'\n Your new checking balance is {check_account}')
-        print(f'\n Your new savings balance is {sav_account}')
-
-    elif account == 'Saving' or account == 'saving' or account == 'savings' or account == 'Savings':
-        print(f' \n how much would you like to transfer?')
-        transferred = float(input())
-        sav_account = sav_account - transferred
-        check_account = check_account + transferred
-        print(f'\n Your new savings balance is {sav_account}')
-        print(f'\n Your new checking balance is {check_account}') 
