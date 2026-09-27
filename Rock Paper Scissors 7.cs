@@ -1,4 +1,4 @@
-﻿Console.WriteLine("  \n Hello, \n \t Welcome, \n \t \t Legendary Challengers!!!");
+Console.WriteLine("  \n Hello, \n \t Welcome, \n \t \t Legendary Challengers!!!");
 Console.WriteLine("Player 1, please tell us your name?");
 string player1 = Console.ReadLine();
 Console.WriteLine("Player 2, please tell us your name?");
@@ -14,9 +14,6 @@ for (int i = 3; i > 0; i--)
 {
 
     int player1choice = 0;
-    //string player1input == Console.ReadLine()
-    //string player2input == Console.ReadLine
-    //still need to place above lines
 
     Console.WriteLine("\n \n Choose your Weapons!!! \n \t Rock \t\t Paper \t\t Scissors \n \t Fire \t\t Sponge \t Water \t  air");
 
@@ -168,7 +165,7 @@ for (int i = 3; i > 0; i--)
   else if (player1choice == 1 && (player2choice == 6))
     {
         Console.WriteLine("\n The rock slowly forms a grand canyon");
-         player1Wins++;
+         player2Wins++;
     }
   else if (player1choice == 1 && (player2choice == 7))
     {
@@ -257,7 +254,7 @@ for (int i = 3; i > 0; i--)
     else if (player1choice == 4 && (player2choice == 3))
     {
         Console.WriteLine("\n I don't think those are being picked back up");
-        player1Wins++;
+        player2Wins++;
     }
     else if (player1choice == 4 && (player2choice == 4))
     {
@@ -306,7 +303,7 @@ else if (player1choice == 5 && (player2choice == 4))
 else if (player1choice == 5 && (player2choice == 5))
        {
           Console.WriteLine("\n WE SHALL DRINK AN OCEAN OH BROTHER");
-          player2Wins++;
+          
        }
 
 else if (player1choice == 5 && (player2choice == 6))
@@ -318,7 +315,7 @@ else if (player1choice == 5 && (player2choice == 6))
 else if (player1choice == 5 && (player2choice == 7))
        {
           Console.WriteLine("\n That got me nice and dry to soak up something else ^3^");
-          player2Wins++;
+          player1Wins++;
        }
 
 else if (player1choice == 6 && (player2choice == 1))
@@ -329,7 +326,7 @@ else if (player1choice == 6 && (player2choice == 1))
 else if (player1choice == 6 && (player2choice == 2))
     {
         Console.WriteLine("\n I believe I can soar \n I see me running through that open door \n I believe I can fly \n I believe I can fly \n I believe I can fly (whoo)");
-        player1Wins++;
+        player2Wins++;
     }
 else if (player1choice == 6 && (player2choice == 3))
     {
