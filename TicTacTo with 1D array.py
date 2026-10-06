@@ -13,9 +13,9 @@ print("You will Press the number key associated with your desired spot to play y
 while player1Wins < 2 and player2Wins < 2:
 
     tictactoboard = [
-        "[0]", "[1]", "[2]",
-        "[3]", "[4]", "[5]",
-        "[6]", "[7]", "[8]"
+        "[1]", "[2]", "[3]",
+        "[4]", "[5]", "[6]",
+        "[7]", "[8]", "[9]"
     ]
 
     winconditions = [
@@ -61,9 +61,12 @@ while player1Wins < 2 and player2Wins < 2:
         printBoard(tictactoboard)
 
         print("Choose a cell \n")
-        cell = int(input())
+        cell = int(input("cell: "))
 
-        tictactoboard[cell] = token
+        if tictactoboard[cell - 1] == f"[{cell}]":
+            tictactoboard[cell - 1] = token
+        else:
+            print("Point already plotted")
 
         printBoard(tictactoboard)
         if checkwin(tictactoboard, token, winconditions):
