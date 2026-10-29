@@ -1,7 +1,5 @@
 import random
 
-import turtle
-
 #Game specific tweaks
 joker_card = False
 
@@ -27,12 +25,11 @@ if joker_card:
 
 random.shuffle(cards)
 
-print(cards)
-print("Total cards:", len(cards))
-
 gamemode = int(input("How many human players? "))
 
 players = []
+
+player_hands = [[], [], []]
 
 
 for player_number in range(gamemode):
@@ -43,6 +40,9 @@ for player_number in range(gamemode):
 desired_players = int(input("How many total players are desired?"))
 while len(players) < desired_players:
     players.append("CPU")
+
+player_states = ["playing" for _ in range(len(players))]
+
 
 
 player_hands = [[] for _ in range(desired_players)]
@@ -70,21 +70,30 @@ initial_deal(cards, player_hands, cards_per_player)
 BlackJack_game_logic = True
 while BlackJack_game_logic == True:
     for player_number in range(len(players)):
-        print(players[player_number], "hand:", player_hands[player_number])
-        print("hit, double down, stand/stay, or split?\n")
-        current_action = input(players[player_number])
-        if current_action.lower() == "hit" or current_action == "1":
-            player_deal
-        elif current_action.lower() == "double" or current_action == "2":
-            player_deal
-        elif current_action.lower() == "stand" or current_action == "3":
-            print("")
-        elif current_action.lower() == "split" or current_action == "4":
-            player_deal*2
+        
+        while player_states[player_number] == "playing":
+        
+            print(players[player_number], "hand:", player_hands[player_number])
+            print("hit, double down, stand/stay, or split?\n")
+        
+            current_action = input(players[player_number] )
+        
+            if current_action.lower() == "hit" or current_action == "1":
+                player_deal(cards, player_hands, player_number)
+            elif current_action.lower() == "double" or current_action == "2":
+                player_deal(cards, player_hands, player_number)
+                player_states[player_number] = "standing"
+            elif current_action.lower() == "stand" or current_action.lower() == "stay" or current_action == "3":
+                player_states[player_number] = "standing"
+                print(players[player_number], player_hands[player_number])
+                
+            elif current_action.lower() == "split" or current_action == "4":
+                print("splitting is not currently functional.")
+                player_deal(cards, player_hands, player_number)*2
         
         #I now need some form of check to for "split" elswise I .pop all cards
             
         #I need to eventually figure out a repeating deck that is random but can only pull from the removed. list. may require an additional append to a new list
 
 
-        deal_cards(cards, player_hands, cards_per_player)
+        #start of next turn deal_cards(cards, player_hands, cards_per_player)
