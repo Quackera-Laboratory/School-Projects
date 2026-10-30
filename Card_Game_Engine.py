@@ -1,7 +1,5 @@
 import random
 
-import turtle
-
 #Game specific tweaks
 joker_card = False
 
@@ -34,7 +32,6 @@ gamemode = int(input("How many human players? "))
 
 players = []
 
-
 for player_number in range(gamemode):
     name = input(f"Who is Player {player_number + 1}?\n")
     players.append(name)
@@ -44,19 +41,22 @@ desired_players = int(input("How many total players are desired?"))
 while len(players) < desired_players:
     players.append("CPU")
 
+hands_per_player = 1
 
-player_hands = [[] for _ in range(desired_players)]
-print(players)
+player_piles = [
+    [[] for _ in range(hands_per_player)]
+    for _ in range(len(players))
+]
 
-def deal_cards(cards, player_hands, cards_per_player):
+def deal_cards(cards, player_piles, cards_per_player):
     for card_number in range(cards_per_player):
-        for player_number in range(len(player_hands)):
-            player_hands[player_number].append(cards.pop())
+        for player_number in range(len(player_piles)):
+            player_piles[player_number][0].append(cards.pop())
 
-def player_deal(cards, player_hands, player_number):
-    player_hands[player_number].append(cards.pop())
+def player_deal(cards, player_piles, player_number):
+    player_piles[player_number][pile_number].append(cards.pop())
     #adds a single card to the players hand
 
-deal_cards(cards, player_hands, cards_per_player)
+deal_cards(cards, player_piles, cards_per_player)
 
-print(player_hands[0])
+print(player_piles[0])
