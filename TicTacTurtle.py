@@ -11,9 +11,10 @@ centers = [
 DIST = screen.canvheight/3
 
 t2 = turtle.Turtle()
-t2.speed(80)
+t2.speed(90)
 t2.color("blue")
-#t2.hideturtle()
+t2.hideturtle()
+token = ["x"]
 
 def draw_board():
     lines = [(-0.5,1.5), (1.5,0.5), (0.5,-1.5), (-1.5,-0.5)]
@@ -22,10 +23,10 @@ def draw_board():
         t2.right(90)
         t2.forward(DIST*3)
 
-def draw_centers():
-    for x,y in centers:
-        t2.teleport(DIST*x, DIST*y)
-        t2.dot(10,"black")
+#def draw_centers():
+    #for x,y in centers:
+        #t2.teleport(DIST*x, DIST*y)
+        #t2.dot(10,"black")
 def find_center (x,y):
     
     x/=DIST
@@ -64,28 +65,39 @@ def find_center (x,y):
 ########################### TODO 2 #############################   
 def draw_token(x,y):
     x,y = find_center(x,y)
+    t2.teleport(x,y)
+    if token == ["x"]:
+        t2.color("black")
+        t2.pensize(8)
+        t2.setheading(45)
+        t2.forward(50)
+        t2.backward(100)
+        t2.teleport(x,y)
+        t2.setheading(-45)
+        t2.forward(50)
+        t2.backward(100)
+    if token == ["o"]:
+        t2.color("black")
+        t2.dot(50)
+        t2.color("white")
+        t2.dot(35)
+        
+    switch_token()
     # Move the turtle to the center found in find_center()
     
     # Draw x or o
-    t2.teleport(x,y)
-    t2.setheading(45)
-    t2.forward(50)
-    t2.backward(100)
-    t2.teleport(x,y)
-    t2.setheading(-45)
-    t2.forward(50)
-    t2.backward(100)
+
 ########################### TODO 3 #############################
     
 def switch_token():
-    # We have to be able to alternate between x and o.
-    # Try to make that happen here.
-    pass
- 
+    if token [0] == "x":
+        token [0] = "o"
+    else:
+        token [0] = "x"
 screen.onclick(draw_token)
 
 draw_board()
-draw_centers()
+#draw_centers()
 turtle.done()
 
  
