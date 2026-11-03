@@ -11,7 +11,7 @@ centers = [
 DIST = screen.canvheight/3
 
 t2 = turtle.Turtle()
-t2.speed(90)
+t2.speed(10)
 t2.color("blue")
 t2.hideturtle()
 token = ["x"]
@@ -67,7 +67,7 @@ def draw_token(x,y):
     x,y = find_center(x,y)
     t2.teleport(x,y)
     if token == ["x"]:
-        t2.color("black")
+        t2.color("orange")
         t2.pensize(8)
         t2.setheading(45)
         t2.forward(50)
@@ -77,10 +77,10 @@ def draw_token(x,y):
         t2.forward(50)
         t2.backward(100)
     if token == ["o"]:
-        t2.color("black")
-        t2.dot(50)
+        t2.color("pink")
+        t2.dot(60)
         t2.color("white")
-        t2.dot(35)
+        t2.dot(45)
         
     switch_token()
     # Move the turtle to the center found in find_center()
