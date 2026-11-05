@@ -1,103 +1,181 @@
 import turtle
-
+import json
+#Init Constants and turtle objects
 screen = turtle.Screen()
-
-centers = [
-    (-1,1),(0,1),(1,1),
-    (-1,0),(0,0),(1,0),
-    (-1,-1),(0,-1),(1,-1)
-    ]
-
 DIST = screen.canvheight/3
-
-t2 = turtle.Turtle()
-t2.speed(10)
-t2.color("blue")
-t2.hideturtle()
+t = turtle.Turtle()
+t.speed(10)
+t.pensize(3)
+t.color("blue")
+t.hideturtle()
+# Init lists
 token = ["x"]
+board = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+         ]
+ctrs_to_brd = {
+(-1,1):(0,0), (0,1):(0,1), (1,1):(0,2),
+(-1,0):(1,0), (0,0):(1,1), (1,0):(1,2),
+(-1,-1):(2,0), (0,-1):(2,1), (1,-1):(2,2)
+    }
+
+########################## Scoring Functions ##########################
+def write_scores(scores):
+    with open("scores.json", mode = "w") as file:
+        json.dump(scores, file)
+        print("#"*20,"\nscores saved")
+        
+def read_scores():
+    with open("scores.json", mode = "r") as file:
+        scores = json.load(file)
+        print("#"*20,"\nscores loaded")
+        return scores
+    
+def restart_scores():
+    scores = {"x":0,"o":0}
+    write_scores(scores)
+
+def print_high_scores():
+    scores = read_scores()
+    print("HIGH SCORES")
+    print("#"*20)
+    for token in ["x","o"]:
+        print(f"{token} has {scores[token]} wins")
+    print("#"*20)
+#######################################################################
+
+########################## Displaying the Board #######################
+
+def update_board(x,y):
+    x = x/DIST
+    y = y/DIST
+    row,collum = ctrs_to_brd[(x,y)]
+    board[row][collum] = token[0]
 
 def draw_board():
     lines = [(-0.5,1.5), (1.5,0.5), (0.5,-1.5), (-1.5,-0.5)]
     for x,y in lines:
-        t2.teleport(DIST*x,DIST*y)
-        t2.right(90)
-        t2.forward(DIST*3)
+        t.teleport(DIST*x,DIST*y)
+        t.right(90)
+        t.forward(DIST*3)
 
-#def draw_centers():
-    #for x,y in centers:
-        #t2.teleport(DIST*x, DIST*y)
-        #t2.dot(10,"black")
-def find_center (x,y):
-    
-    x/=DIST
-    y/=DIST
-    
+def print_board():
+    #board[row][column]
+    print(f' {board[0][0]} | {board[0][1]} | {board[0][2]} ')
+    print('-----------')
+    print(f' {board[1][0]} | {board[1][1]} | {board[1][2]} ')
+    print('-----------')
+    print(f' {board[2][0]} | {board[2][1]} | {board[2][2]} ')
+#######################################################################
+
+########################## Drawing Tokens #############################
+def find_center(x,y):  
+    x /= DIST
+    y /= DIST
     if x > 0.5:
         x = 1
-    elif x < - 0.5:
+    elif x < -0.5:
         x = -1
     else:
-        x = 0
+        x = 0 
     
     if y > 0.5:
         y = 1
     elif y < - 0.5:
         y = -1
     else:
-        y = 0 
+        y = 0
     
-
-    if y > 0.5*DIST:
-        print("upper right")
-    elif y <-0.5*DIST:
-        print("lower right")
-    else:
-        print("middle")
-        
-    print(x*DIST, y*DIST)
-    return(x*DIST, y*DIST)
-             
-# Make the conditionals for the rest of the cells do it first
-    # without a loop, then add the loop if you want.
     
-    return 
-
-########################### TODO 2 #############################   
+    print(x*DIST,y*DIST)
+    return x*DIST,y*DIST
+   
+   
+   
 def draw_token(x,y):
     x,y = find_center(x,y)
-    t2.teleport(x,y)
+    update_board(x,y)
+    t.teleport(x,y)
     if token == ["x"]:
-        t2.color("orange")
-        t2.pensize(8)
-        t2.setheading(45)
-        t2.forward(50)
-        t2.backward(100)
-        t2.teleport(x,y)
-        t2.setheading(-45)
-        t2.forward(50)
-        t2.backward(100)
-    if token == ["o"]:
-        t2.color("pink")
-        t2.dot(60)
-        t2.color("white")
-        t2.dot(45)
+        t.color("orange")
+        t.pensize(8)
+        t.setheading(45)
+        t.forward(50)
+        t.backward(100)
+        t.teleport(x,y)
+        t.setheading(-45)
+        t.forward(50)
+        t.backward(100)
+    elif token == ["o"]:
+        t.color("pink")
+        t.dot(75)
+        t.color("white")
+        t.dot(60)
         
     switch_token()
-    # Move the turtle to the center found in find_center()
-    
-    # Draw x or o
 
-########################### TODO 3 #############################
-    
 def switch_token():
-    if token [0] == "x":
-        token [0] = "o"
+    if token[0] == "x":
+        token[0] = "o"
     else:
-        token [0] = "x"
-screen.onclick(draw_token)
+        token[0] = "x"
+#######################################################################
 
+############################# Game Loop ###############################
+def game_loop():
+    # initialize the token as x
+    token = "x"
+    for turn in range(9):
+        print_board()
+        move = int(input(f"Please put {token} somewhere"))
+        
+        ###update board via click
+        
+        for row in range(3):
+            for col in range(3):
+                if move == board[row][col]:
+                    board[row][col] = token
+                    
+        for idx in range(3):
+            # check rows
+            if board[idx][0]==board[idx][1]==board[idx][2]:
+                print(f"{token} is the winner")
+                return token
+            # check cols
+            elif board[0][idx]==board[1][idx]==board[2][idx]:
+                print(f"{token} is the winner")
+                return token
+        #check diags
+        if board[0][0]==board[1][1]==board[2][2]:
+            print(f"{token} is the winner")
+            return token
+        elif board[2][0]==board[1][1]==board[0][2]:
+            print(f"{token} is the winner")
+            return token
+            
+        if token == "x":
+            token = "o"
+        else:
+            token = "x"
+
+#######################################################################
+
+################### Calling functions and stuff #########################
+     
+winner = game_loop()
+restart_scores()
+print_high_scores()
+# read in the scores and save as scores
+scores = read_scores()
+# add one to the correct score
+scores[winner] += 1
+# write the scores to the json file
+write_scores(scores)
+
+# Commented these out for the game works in the terminal. 
+screen.onclick(draw_token)
 draw_board()
-#draw_centers()
 turtle.done()
 
- 
