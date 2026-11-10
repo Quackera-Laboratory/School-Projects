@@ -108,6 +108,7 @@ def draw_token(x,y):
         t.color("white")
         t.dot(60)
     if winner != None:
+        t.teleport(0,150)
         t.write(f"Game Over\n {token} is the winner!!!")
         #update scores
         scores = read_scores()
@@ -115,10 +116,10 @@ def draw_token(x,y):
         write_scores(scores)
     else:
         switch_token()
-     #   t.write(f"{token} is the winner")
-    #checks_for_winners(token[0])
+        t.write(f"{token} is the winner")
+    checks_for_winners(token[0])
 
-    #token = checks_for_winners(token[0])
+    winner = checks_for_winners(token[0])
     
     
     switch_token()
