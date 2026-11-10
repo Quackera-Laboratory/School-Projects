@@ -61,13 +61,7 @@ def draw_board():
         t.right(90)
         t.forward(DIST*3)
 
-def print_board():
-    #board[row][column]
-    print(f' {board[0][0]} | {board[0][1]} | {board[0][2]} ')
-    print('-----------')
-    print(f' {board[1][0]} | {board[1][1]} | {board[1][2]} ')
-    print('-----------')
-    print(f' {board[2][0]} | {board[2][1]} | {board[2][2]} ')
+
 #######################################################################
 
 ########################## Drawing Tokens #############################
@@ -113,7 +107,20 @@ def draw_token(x,y):
         t.dot(75)
         t.color("white")
         t.dot(60)
-        
+    if winner != None:
+        t.write(f"Game Over\n {token} is the winner!!!")
+        #update scores
+        scores = read_scores()
+        scores[winner] +=1
+        write_scores(scores)
+    else:
+        switch_token()
+     #   t.write(f"{token} is the winner")
+    #checks_for_winners(token[0])
+
+    #token = checks_for_winners(token[0])
+    
+    
     switch_token()
 
 def switch_token():
@@ -124,47 +131,30 @@ def switch_token():
 #######################################################################
 
 ############################# Game Loop ###############################
-def game_loop():
-    # initialize the token as x
-    token = "x"
-    for turn in range(9):
-        print_board()
-        move = int(input(f"Please put {token} somewhere"))
-        
-        ###update board via click
-        
-        for row in range(3):
-            for col in range(3):
-                if move == board[row][col]:
-                    board[row][col] = token
-                    
-        for idx in range(3):
+def checks_for_winners(token):
+    
+    for idx in range(3):
             # check rows
-            if board[idx][0]==board[idx][1]==board[idx][2]:
-                print(f"{token} is the winner")
-                return token
+        if board[idx][0]==board[idx][1]==board[idx][2]:
+            t.write(f"{token} is the winner")
+            return token
             # check cols
-            elif board[0][idx]==board[1][idx]==board[2][idx]:
-                print(f"{token} is the winner")
-                return token
+        elif board[0][idx]==board[1][idx]==board[2][idx]:
+            t.write(f"{token} is the winner")
+            return token
         #check diags
-        if board[0][0]==board[1][1]==board[2][2]:
-            print(f"{token} is the winner")
-            return token
-        elif board[2][0]==board[1][1]==board[0][2]:
-            print(f"{token} is the winner")
-            return token
-            
-        if token == "x":
-            token = "o"
-        else:
-            token = "x"
+    if board[0][0]==board[1][1]==board[2][2]:
+        t.write(f"{token} is the winner")
+        return token
+    elif board[2][0]==board[1][1]==board[0][2]:
+        t.write(f"{token} is the winner")
+        return token
 
 #######################################################################
 
 ################### Calling functions and stuff #########################
      
-winner = game_loop()
+winner = checks_for_winners()
 restart_scores()
 print_high_scores()
 # read in the scores and save as scores
@@ -177,5 +167,5 @@ write_scores(scores)
 # Commented these out for the game works in the terminal. 
 screen.onclick(draw_token)
 draw_board()
-turtle.done()
+turtle.mainloop()
 
