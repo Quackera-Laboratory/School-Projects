@@ -91,6 +91,7 @@ def find_center(x,y):
 def draw_token(x,y):
     x,y = find_center(x,y)
     update_board(x,y)
+    winner = checks_for_winners(token[0])
     t.teleport(x,y)
     if token == ["x"]:
         t.color("orange")
@@ -105,21 +106,17 @@ def draw_token(x,y):
     elif token == ["o"]:
         t.color("pink")
         t.dot(75)
-        t.color("white")
+        t.color("black")
         t.dot(60)
     if winner != None:
         t.teleport(0,150)
-        t.write(f"Game Over\n {token} is the winner!!!")
+        t.write(f"Game Over\n {token} is the winner!!!", align= "center", font = ("Arial",int(DIST//2), "bold"))
         #update scores
         scores = read_scores()
         scores[winner] +=1
         write_scores(scores)
     else:
-        switch_token()
-        t.write(f"{token} is the winner")
-    checks_for_winners(token[0])
-
-    winner = checks_for_winners(token[0])
+        checks_for_winners(token[0])
     
     
     switch_token()
@@ -133,40 +130,42 @@ def switch_token():
 
 ############################# Game Loop ###############################
 def checks_for_winners(token):
-    
+            
     for idx in range(3):
-            # check rows
+        # check rows
         if board[idx][0]==board[idx][1]==board[idx][2]:
-            t.write(f"{token} is the winner")
+            print(f"{token} is the winner")
             return token
-            # check cols
+        # check cols
         elif board[0][idx]==board[1][idx]==board[2][idx]:
-            t.write(f"{token} is the winner")
+            print(f"{token} is the winner")
             return token
-        #check diags
+    #check diags
     if board[0][0]==board[1][1]==board[2][2]:
-        t.write(f"{token} is the winner")
+        print(f"{token} is the winner")
         return token
     elif board[2][0]==board[1][1]==board[0][2]:
-        t.write(f"{token} is the winner")
+        print(f"{token} is the winner")
         return token
+    else:
+        return None
 
 #######################################################################
 
 ################### Calling functions and stuff #########################
      
-winner = checks_for_winners()
+#winner = checks_for_winners(token[0])
 restart_scores()
 print_high_scores()
 # read in the scores and save as scores
 scores = read_scores()
 # add one to the correct score
-scores[winner] += 1
+#scores[winner] += 1
 # write the scores to the json file
 write_scores(scores)
 
 # Commented these out for the game works in the terminal. 
-screen.onclick(draw_token)
 draw_board()
+screen.onclick(draw_token)
 turtle.mainloop()
 
