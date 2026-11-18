@@ -1,18 +1,18 @@
 
-
+//Class Decleration
 class CannonLogic
 {
-    public int cannon_step = 11;
-    public int lazer_length = 20;
-    public int lazer_speed = 25;
-    public int lazer_width = 10;
+    public int cannon_step;
+    public int lazer_length;
+    public int lazer_speed;
+    public int lazer_width;
 
 public CannonLogic(int cannonstep, int lazerLength, int lazerSpeed, int lazerWidth)
     {
-        cannon_step = 11;
-        lazer_length = 20;
-        lazer_speed = 25;
-        lazer_width = 10;
+        cannon_step = cannon_step;
+        lazer_length = lazer_length;
+        lazer_speed = lazer_speed;
+        lazer_width = lazer_width;
 
     }
 }
@@ -52,3 +52,5 @@ public Powerups(int screen_nuke, int enemy_wave, int one_up, int five_spread)
 
     }
 }
+
+//spawning entities
